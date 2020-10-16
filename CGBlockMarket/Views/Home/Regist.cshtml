@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <script type="text/javascript" src="~/lib/jquery/dist/jquery.js"></script>
+    <script>
+        function testApi() {
+            $.ajax({
+                method:"get",
+                url: "http://localhost:6001/api/redis/getuserdata?key=0001",
+                success: function (data) {
+                    alert(data);
+                },
+                error: function (msg) {
+                    alert(msg);
+                }
+            });
+        }
+
+    </script>
+</head>
+<body>
+    <div><button type="button" onclick="testApi()">测试api</button></div>
+    <form action="OnRegist" method="post">
+        
+        <div>
+            账号：<input type="text" id="UserNum" name="UserNum"/>
+        </div>
+        <div>
+            密码：<input type="password" id="Password" name="Password" />
+        </div>
+        <div>
+            用户名：<input type="text" id="UserName" name="UserName" />
+        </div>
+        <div>
+            手机：<input type="text" id="PhoneNum" name="PhoneNum" />
+        </div>
+        <div>
+            邮箱：<input type="text" id="Email" name="Email" />
+        </div>
+        <div>
+            <input type="submit" value="注册" />
+        </div>
+    </form>
+    
+</body>
+</html>

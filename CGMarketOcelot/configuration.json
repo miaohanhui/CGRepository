@@ -1,0 +1,129 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/{url}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ],
+      "UpstreamPathTemplate": "/Main/{url}",
+      "UpstreamHttpMethod": [ "Get", "Post" ]
+      //"ServiceName": "CGBlockMarket",
+      //"LoadBalancer": "RoundRobin",
+      //"UseServiceDiscovery": true,
+      //"ReRouteIsCaseSensitive": false,
+      //"QoSOptions": {
+      //  "ExceptionsAllowedBeforeBreaking": 3,
+      //  "DurationOfBreak": 10,
+      //  "TimeoutValue": 5000
+      //},
+      //"HttpHandlerOptions": {
+      //  "AllowAutoRedirect": false,
+      //  "UseCookieContainer": false,
+      //  "UseTracing": false
+      //},
+      //"AuthenticationOptions": {
+      //  "AuthenticationProviderKey": "",
+      //  "AllowedScopes": []
+      //},
+      //"RateLimitOptions": {
+      //  "ClientWhitelist": [ "admin" ],
+      //  "EnableRateLimiting": true,
+      //  "Period": "1m",
+      //  "PeriodTimespan": 15,
+      //  "Limit": 35
+      //}
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/redis/{url}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 6001
+        }
+      ],
+      "UpstreamPathTemplate": "/redisservice/{url}",
+      "UpstreamHttpMethod": [ "Get", "Post" ]
+      //"ServiceName": "RedisService",
+      //"LoadBalancer": "RoundRobin",
+      //"UseServiceDiscovery": true,
+      //"ReRouteIsCaseSensitive": false,
+      //"QoSOptions": {
+      //  "ExceptionsAllowedBeforeBreaking": 3,
+      //  "DurationOfBreak": 10,
+      //  "TimeoutValue": 5000
+      //},
+      //"HttpHandlerOptions": {
+      //  "AllowAutoRedirect": false,
+      //  "UseCookieContainer": false,
+      //  "UseTracing": false
+      //},
+      //"AuthenticationOptions": {
+      //  "AuthenticationProviderKey": "",
+      //  "AllowedScopes": []
+      //},
+      //"RateLimitOptions": {
+      //  "ClientWhitelist": [ "admin" ],
+      //  "EnableRateLimiting": true,
+      //  "Period": "1m",
+      //  "PeriodTimespan": 15,
+      //  "Limit": 35
+      //}
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/token/{url}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 6004
+        }
+      ],
+      "UpstreamPathTemplate": "/mongodbservice/{url}",
+      "UpstreamHttpMethod": [ "Get", "Post" ]
+      //"QoSOptions": {
+      //  "ExceptionsAllowedBeforeBreaking": 3,
+      //  "DurationOfBreak": 10,
+      //  "TimeoutValue": 5000
+      //}
+      //"ServiceName": "MongodbService",
+      //"LoadBalancer": "RoundRobin",
+      //"UseServiceDiscovery": true,
+      //"HttpHandlerOptions": {
+      //  "AllowAutoRedirect": false,
+      //  "UseCookieContainer": false
+      //},
+      //"AuthenticationOptions": {
+      //  "AuthenticationProviderKey": "",
+      //  "AllowedScopes": []
+      //},
+      //"RateLimitOptions": {
+      //  "ClientWhitelist": [ "user" ],
+      //  "EnableRateLimiting": true,
+      //  "Period": "1m",
+      //  "PeriodTimespan": 15,
+      //  "Limit": 35
+      //}
+    }
+  ],
+  //"GlobalConfiguration": {
+  //  "ServiceDiscoveryProvider": {
+  //    "Host": "localhost",
+  //    "Port": 5000
+  //  }
+  //  ,"RateLimitOptions": {
+  //    "ClientIdHeader": "client_id",
+  //    "QuotaExceededMessage": "Too Many Requests!!!",
+  //    "DisableRateLimitHeaders": false
+  //  }
+  //},
+  "GlobalConfiguration": {
+    "BaseUrl": "http://localhost:5000"
+  }
+}

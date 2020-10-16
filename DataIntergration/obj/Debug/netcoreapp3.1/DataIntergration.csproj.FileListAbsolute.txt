@@ -1,0 +1,9 @@
+F:\projects\CG\DataIntergration\bin\Debug\netcoreapp3.1\DataIntergration.deps.json
+F:\projects\CG\DataIntergration\bin\Debug\netcoreapp3.1\DataIntergration.dll
+F:\projects\CG\DataIntergration\bin\Debug\netcoreapp3.1\DataIntergration.pdb
+F:\projects\CG\DataIntergration\obj\Debug\netcoreapp3.1\DataIntergration.csprojAssemblyReference.cache
+F:\projects\CG\DataIntergration\obj\Debug\netcoreapp3.1\DataIntergration.AssemblyInfoInputs.cache
+F:\projects\CG\DataIntergration\obj\Debug\netcoreapp3.1\DataIntergration.AssemblyInfo.cs
+F:\projects\CG\DataIntergration\obj\Debug\netcoreapp3.1\DataIntergration.csproj.CoreCompileInputs.cache
+F:\projects\CG\DataIntergration\obj\Debug\netcoreapp3.1\DataIntergration.dll
+F:\projects\CG\DataIntergration\obj\Debug\netcoreapp3.1\DataIntergration.pdb

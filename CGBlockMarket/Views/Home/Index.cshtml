@@ -1,0 +1,41 @@
+﻿@model List<CGBlockMarket.Models.Gif>
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8" />
+    <script src="http://localhost:5000/main/lib/jquery/dist/jquery.js"></script>
+    <script type="text/javascript">
+        robgif = function (gifId) {
+            var userId = '@ViewData["UserId"]';
+            $.ajax({
+                url: "http://localhost:5000/redisservice/RobGif",               
+                type: "post",
+                async: true,
+                contentType: "application/json",
+                dataType: "json",
+                data: JSON.stringify({ "UserId": userId, "GifId": gifId }),
+                success: function (data) {
+                    alert(data.message + "剩余数：" + data.leftCount);
+                },
+                error: function (msg) {
+                    alert(msg);
+                }
+            });
+        };
+
+    </script>
+</head>
+<body>
+    <form>
+        <h1>商城首页 @ViewData["UserId"]</h1>
+
+        <div>
+            @foreach (var gif in Model)
+            {
+                <div>
+                    @gif.GifName
+                    <input type="button" value="抢礼物" onclick="robgif('@gif.ID')" />
+                </div>
+            }
+        </div>
+    </form>
+</body>
